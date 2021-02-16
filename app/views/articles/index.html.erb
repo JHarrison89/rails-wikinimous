@@ -1,0 +1,8 @@
+<h1>index.html.erb</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li><strong><%= article.title %></strong></li>
+    <li><%= article.content %></li>
+  <% end %>
+</ul>
