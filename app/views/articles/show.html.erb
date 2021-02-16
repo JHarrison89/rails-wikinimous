@@ -1,14 +1,20 @@
 <h1>show.html.erb</h1>
 
-<h2><%= @article.title %></h2>
-<p><%= link_to "edit page", edit_article_path %></p>
-<p><%= link_to "Delete article",
+<div class="container">
+  <div class="row .flex-column;">
+
+    <div><h2><%= @article.title %></h2></div>
+    <div> <p><%= link_to "edit page", edit_article_path %></p></div>
+    <div>
+      <p><%= link_to "Delete article",
             article_path(@article),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
-</p>
+      </p>
+  </div>
 
+  <p><%= @article.content %></p>
+  <p><%= link_to "home", articles_path %></p>
 
-<p><%= @article.content %></p>
-<p><%= link_to "home", articles_path %></p>
-
+  </div>
+</div>
