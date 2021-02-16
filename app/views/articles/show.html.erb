@@ -1,0 +1,14 @@
+<h1>show.html.erb</h1>
+
+<h2><%= @article.title %></h2>
+<p><%= link_to "edit page", edit_article_path %></p>
+<p><%= link_to "Delete article",
+            article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+</p>
+
+
+<p><%= @article.content %></p>
+<p><%= link_to "home", articles_path %></p>
+
